@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="Clean_Water_Project.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Clean_Water_Project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+    
+
+    <Grid x:Name="LayoutRoot" Margin="0,-26.667,0,-0.333">
+        
+        <Grid.Background>
+            <ImageBrush ImageSource="fractal_background.png"
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="About Crystal" Margin="0,60,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <TextBlock HorizontalAlignment="Left" Margin="5,25,5,0" TextWrapping="Wrap" Text="Welcome to Crystal! Crystal empowers users by helping identify clean water sources. Crystal was developed by Group 62 in CS 2340. Thank you to the following sources for letting us use their publicaly available vector art, fonts, and images.Vecteezy was the source for all of the vector icons used in this application. These icons are available for noncommercial derrivative use. Vectors by Vecteezy https://www.vecteezy.com"
+                       VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" FontSize="20"/>
+
+        </Grid>
+    </Grid>
+</Page>

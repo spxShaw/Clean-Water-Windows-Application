@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="Clean_Water_Project.ViewMap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Clean_Water_Project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps">
+
+    <Grid x:Name="LayoutRoot"  >
+
+
+
+        <StackPanel HorizontalAlignment="Stretch"
+                Margin="0,0,0,0" VerticalAlignment="Stretch" >
+
+            <Maps:MapControl
+            	x:Name="MapControl1"
+            	MapServiceToken="AmjpH3jRz3cva_q56M48lvZG70IpKk0B2jXCLmQk_RlG0i0ww2CyV7YjwA5zYDEI"
+            	Height="640"
+            	Margin="0,0,0,0" />
+        </StackPanel>
+        
+    </Grid>
+</Page>

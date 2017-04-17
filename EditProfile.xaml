@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="Clean_Water_Project.EditProfile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Clean_Water_Project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid x:Name="LayoutRoot" Margin="0,-26.667,0,-0.333">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="fractal_background.png"
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Edit Your Profile" Margin="40,70,0,26.5" FontSize="40" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0"/>
+
+        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="19,144,1,19.667" Grid.RowSpan="2">
+            <TextBox Name="firstName" Header="First Name" Margin="0,0,10,0"/>
+            <TextBox Name="lastName" Header="Last Name" Margin="0,10,10,0"/>
+            <TextBox Name="emailAddress" Header="Email Address" Margin="0,10,10,0"/>
+            <Button Name="confirmButton" Click="confirmButton_Click" BorderThickness="0" Margin="0,60,0,0" Height="85" Width="370">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="confirm_button.png"/>
+                </Button.Background>
+            </Button>
+
+
+            <!-- Content body -->
+        </StackPanel>
+    </Grid>
+</Page>
